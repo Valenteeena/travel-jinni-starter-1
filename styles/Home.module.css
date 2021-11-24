@@ -3,27 +3,75 @@
     padding: 0;
 } */
 .container {
-    min-height: 100vh;
-    padding: 0 0.5rem;
-    background-color: rgba(0, 0, 0, 0.466);
+    @apply min-h-screen px-0 py-0.5 text-white bg-opacity-50 bg-black;
     background-blend-mode: overlay;
-    color:white;
     background-image: url('/bgimage.png');
     background-repeat: no-repeat;
-    background-size:cover, 90%;
+    background-size: cover, 90%;
 }
-.navtext{
-    font-size: .9rem;
+.header {
+    @apply flex justify-between w-11/12 m-auto pb-1 pt-2;
 }
-.pFlexT{
+.navtext {
+    font-size: 0.9rem;
+}
+.pFlexT {
     color: rgb(255, 211, 77);
     font-weight: bold;
     font-size: 1.2rem;
     line-height: 20px;
 }
-.txtSpan{
-   font-size: .65rem; 
-   text-transform: uppercase;
-   padding-top: 0;
-   margin-top: 0;
+.txtSpan {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    padding-top: 0;
+    margin-top: 0;
+}
+.content {
+    @apply flex px-14 py-4 border-t border-gray-500;
+}
+.leftSide {
+    @apply w-60;
+}
+.rightSide {
+    @apply flex pl-40 pt-16;
+}
+.conBody {
+    @apply ml-40 text-center border-white border mt-2 pt-8 px-4 bg-gray-400 bg-opacity-10 rounded-md;
+}
+
+@media screen and (max-width: 800px) {
+    .leftSide {
+        @apply w-96;
+    }
+    .content {
+        @apply px-7;
+    }
+    .rightSide {
+        @apply flex pl-14 pt-10;
+    }
+    .conBody {
+        @apply ml-16  mt-2 pt-8 px-4 w-96;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    .leftSide {
+        @apply w-24;
+    }
+    .pFlexT {
+        font-size: 0.9rem;
+    }
+    .content {
+        @apply px-2;
+    }
+    .rightSide {
+        @apply flex pl-4 pt-2;
+    }
+    .conBody {
+        @apply ml-8  mt-2 pt-8 px-2 w-64;
+    }
+    .txtSpan {
+        font-size: 0.5rem;
+    }
 }
