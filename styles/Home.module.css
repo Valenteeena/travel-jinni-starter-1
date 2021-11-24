@@ -53,6 +53,9 @@
     .conBody {
         @apply ml-16  mt-2 pt-8 px-4 w-96;
     }
+    .txtSpan {
+        font-size: 0.5rem;
+    }
 }
 
 @media screen and (max-width: 512px) {
